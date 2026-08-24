@@ -1,0 +1,100 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="x77KotQ2UmlgmIMi_4MT">
+    <mxGraphModel dx="808" dy="444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="Fonte 12V" vertex="1">
+          <mxGeometry height="60" width="120" x="60" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-2" edge="1" parent="1" source="_iJgYr2FHXRdG9lrIBZK-1" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="110" />
+            </Array>
+            <mxPoint x="450" y="300" as="sourcePoint" />
+            <mxPoint x="210" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" value="Chave Gangorra (On/Off)" vertex="1">
+          <mxGeometry height="80" width="80" x="210" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-4" edge="1" parent="1" source="_iJgYr2FHXRdG9lrIBZK-3" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="280" y="170" as="sourcePoint" />
+            <mxPoint x="330" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" value="Arduino Uno R4&lt;div&gt;Minima&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="110" x="330" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-8" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="Sensor YF-B1" vertex="1">
+          <mxGeometry height="60" width="110" x="330" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-9" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="Conversor de Sinal" vertex="1">
+          <mxGeometry height="60" width="110" x="330" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-10" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="Válvula Proporcional" vertex="1">
+          <mxGeometry height="60" width="110" x="330" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-11" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_iJgYr2FHXRdG9lrIBZK-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="200" />
+            </Array>
+            <mxPoint x="310" y="110" as="sourcePoint" />
+            <mxPoint x="310" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_iJgYr2FHXRdG9lrIBZK-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="290" />
+            </Array>
+            <mxPoint x="310" y="200" as="sourcePoint" />
+            <mxPoint x="310" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-13" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_iJgYr2FHXRdG9lrIBZK-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="380" />
+            </Array>
+            <mxPoint x="310" y="290" as="sourcePoint" />
+            <mxPoint x="310" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-14" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="Módulo Optoacoplador" vertex="1">
+          <mxGeometry height="80" width="120" x="510" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-15" edge="1" parent="1" source="_iJgYr2FHXRdG9lrIBZK-7" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_iJgYr2FHXRdG9lrIBZK-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="470" y="260" as="sourcePoint" />
+            <mxPoint x="520" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-16" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="Potenciômetro" vertex="1">
+          <mxGeometry height="80" width="120" x="510" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-17" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" value="Display LCD" vertex="1">
+          <mxGeometry height="80" width="120" x="510" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-18" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_iJgYr2FHXRdG9lrIBZK-17" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="310" />
+            </Array>
+            <mxPoint x="470" y="110" as="sourcePoint" />
+            <mxPoint x="470" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_iJgYr2FHXRdG9lrIBZK-19" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="_iJgYr2FHXRdG9lrIBZK-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="470" y="210" as="sourcePoint" />
+            <mxPoint x="520" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

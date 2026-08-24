@@ -1,0 +1,77 @@
+Sensor de fluxo de água
+- o sensor é composto basicamente por uma turbina, um ímã e um sensor hall
+- quando passa a água pelo sensor, a turbina é girada e o imã gera um campo magnético, medido pelo sensor hall
+- o sinal de saída é uma onda quadrada para cada revolução da roda.
+- o fluxo pode ser medido pela quantidade de pulsos (frequência)
+- YF-B1 (corpo de latão de 1/2") (1 a 25 L/min)
+- fluxo de água aqui nos testes costuma ser de 6.9 L/min, enquanto que o fluxo na caldeira pode chegar a 20L/min
+
+Válvula Proporcional
+- a válvula é acionada por um sinal elétrico
+- o solenoide na válvula funciona como um ímã, atraindo ou afastando o carretel e variando o fluxo
+- uma mola aumenta a precisão do deslocamento do carretel
+- quanto maior a tensão aplicada na válvula, maior será o fluxo de água
+- talvez uma opção mais fácil seja usar uma válvula solenoide de 24V, considerando a bateria de 24V presente no sistema e o fluxo máximo
+
+
+
+O sistema com a válvula solenoide funcionaria mais ou menos assim assim:
+- o raspberry pi teria a saída de pwm ligada a porta de um mosfet
+- o mosfet faria o chaveamento da válvula, abrindo e fechando de acordo com a entrada recebida
+- o funcionamento mecânico da válvula faria com que ela não se abrisse nem fechasse rapidamente, isso possibilita que a válvula esteja
+parcialmente aberta, reduzindo o fluxo total de acordo com o duty cycle definido no python.
+- no caso de 6.9 L/min, o duty cycle seria de 35% (6.9/20), considerando o fluxo na caldeira, mas vai depender do fluxo desejado
+- na torneira do galpão, o controle implementado no código aumentaria o duty cycle para atingir o fluxo desejado
+- teria que usar um mosfet de baixa tensão, já que o raspberry só fornece 3.3V
+
+Com a válvula proporcional:
+- o raspberry pi teria a saída de pwm ligada a um optoacoplador, ligado a porta de um mosfet
+- o chaveamento do mosfet com o pwm modula a tensão sobre a válvula de acordo com o controle necessitado naquele momento
+- é necessário estabelecer o controle não linear a ser aplicado, de acordo com as especificações da válvula, calibrando os parâmetros
+usados no código
+- diodo schottky de proteção para não queimar o mosfet
+- optoacoplador para proteção da raspberry pi
+
+
+
+
+
+
+opções de sensores: YF-B1 LATÃO 1/2" ex: https://www.mercadolivre.com.br/sensor-de-fluxo-de-agua-yf-b1-12-1-25lmin-metal/p/MLB59868964
+opções de válvulas: Burkert 2875 stainless steel 6mm FKM ex: https://www.valves-direct.com/type-2875/94541-burkert-239091-2-2-nc-type-2875-solenoid-control-valve-for-higher-differential-pressures.html (muito cara)
+			
+			us solid 1/2" https://ussolid.com/pt/products/valvula-de-esfera-motorizada-proporcional-de-12-vias-em-aco-inoxidavel-com-controle-de-924-v-cc-e-420-ma-5-fios-com-indicador-de-posicao-classificacao-ip67-e-passagem-plena?srsltid=AfmBOopSO5vGeMlotOkvBaC3cu2WbbtJKdKoAcXBQKKmXDnx0gKAIlW_
+
+
+
+além disso preciso de: esp32 (40 reais), conversor de sinal 0-15v para 0-20mA
+usando o esp32 não preciso do mosfet nem do diodo, preciso usar apenas a saída DAC no conversor de sinal para controlar a válvula
+
+
+
+
+
+
+
+Os pinos GPIO do ESP32 aceitam tensões de até 3V3, mas o sensor de fluxo tem output igual à alimentação, que, nesse caso, seria de 5V.
+Portanto, é necessário um método para reduzir essa tensão até 3v3. Um divisor de tensão com um resistor de 10k e outro de 20k é uma 
+maneira simples de realizar isso. Além disso, para filtrar ruídos, foi adicionado um capacitor de 22nF em paralelo com o resistor de 20k.
+
+Também foi adicionado um regulador de tensão para abaixar os 12V da alimentação para 5V e alimentar tanto o sensor quanto o microcontrolador.
+
+Foi adicionado ao projeto um conversor de sinal, para pegar a tensão do pino DAC do ESP-32 e transformar em corrente, para variar a abertura da válvula, que usa controle por corrente.
+
+A lista de todos os componentes fica:
+
+- ESP-32 https://www.mercadolivre.com.br/esp32-wifi-bluetooth--doit-devkit-com-esp32wroom32/up/MLBU2867882022?pdp_filters=item_id%3AMLB5197648024&from=gshop&matt_tool=49835134&matt_word=&matt_source=google&matt_campaign_id=22090354217&matt_ad_group_id=192555042174&matt_match_type=&matt_network=g&matt_device=c&matt_creative=799032780925&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=5336131774&matt_product_id=MLBU2867882022&matt_product_partition_id=2470936418360&matt_target_id=pla-2470936418360&cq_src=google_ads&cq_cmp=22090354217&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=4&gad_campaignid=22090354217&gbraid=0AAAAAD93qcAfPHtFHFq-Bx279xHNwIRW9&gclid=CjwKCAjw1vXTBhB-EiwAEKr_k-uq-3t3jDqdFVdn_jUwJrC3EH1zieYk-OtzS4Nbv8Eet9QCqSBKJxoC7tAQAvD_BwE
+
+- Módulo Conversor de Sinal Mc1 0-15V para 0-20mA Tensão para Corrente https://www.mercadolivre.com.br/modulo-conversor-de-sinal-mc1-0-15v-para-0-20ma-tensao-para-corrente/p/MLB46554336?pdp_filters=item_id%3AMLB5752892770&from=gshop&matt_tool=49835134&matt_word=&matt_source=google&matt_campaign_id=22090354217&matt_ad_group_id=194474655594&matt_match_type=&matt_network=g&matt_device=c&matt_creative=792355616874&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735125422&matt_product_id=MLB46554336-product&matt_product_partition_id=2470936482680&matt_target_id=pla-2470936482680&cq_src=google_ads&cq_cmp=22090354217&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gad_campaignid=22090354217&gbraid=0AAAAAD93qcC02Z28R5rnZ8eGMS1b5LeRv&gclid=CjwKCAjw1vXTBhB-EiwAEKr_k4hQDE5xCYQTbll_7dWnk4jkj60NxiX18pHyG8QzsOsM1Ke40N-4gxoCW80QAvD_BwE#highlighted_specs_attrs
+
+- Regulador De Tensão Ajustável Lm2596 Step Down 3a https://www.mercadolivre.com.br/regulador-de-tensao-ajustavel-lm2596-step-down-3a/up/MLBU1761027352?pdp_filters=item_id%3AMLB4410941642&from=gshop&matt_tool=49835134&matt_word=&matt_source=google&matt_campaign_id=22090354217&matt_ad_group_id=192555042174&matt_match_type=&matt_network=g&matt_device=c&matt_creative=799032780925&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=109757862&matt_product_id=MLBU1761027352&matt_product_partition_id=2388513386149&matt_target_id=pla-2388513386149&cq_src=google_ads&cq_cmp=22090354217&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gad_campaignid=22090354217&gbraid=0AAAAAD93qcC02Z28R5rnZ8eGMS1b5LeRv&gclid=CjwKCAjw1vXTBhB-EiwAEKr_k1OZyvphUF4k_fxMFZTj-AhrzlWCSs05xzJu2881PDYco18wJcY5MhoCBd0QAvD_BwE
+
+- Sensor De Fluxo De Água Yf-b1 - 1/2 1-25l/min - Metal https://www.mercadolivre.com.br/sensor-de-fluxo-de-agua-yf-b1-12-1-25lmin-metal/p/MLB59868964
+
+- 1/2" Proportional Motorized Ball Valve - Stainless Steel, DC 9–24V, 4–20mA Control, 5-Wire with Position Indicator, IP67, Full Port https://ussolid.com/products/12-proportional-motorized-ball-valve-stainless-steel-dc-924v-420ma-control-5-wire-with-position-indicator-ip67-full-port?srsltid=AfmBOopSO5vGeMlotOkvBaC3cu2WbbtJKdKoAcXBQKKmXDnx0gKAIlW_
+
+- Resistor 10k, Resistor 20k, Capacitor 22nF, Fusíveis de 1.5A
+
