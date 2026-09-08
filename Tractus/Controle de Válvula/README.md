@@ -1,14 +1,12 @@
-# Integral
-
 # Sistema de Controle da Válvula - Tractus
 A ideia desse sistema é automatizar o controle do fluxo de água no acoplamento dos transdutores do TRACTUS, substituindo o controle manual. Para isso, é necessário que o sistema faça uma leitura do fluxo de água, processe esse sinal e retorne o comando à válvula proporcional, fazendo-a abrir ou fechar, de acordo com o nível de fluxo desejado.
 
 Para o projeto, os componentes utilizados serão:
-- [Fusível 2A + Porta Fusível]() (proteção elétrica do sistema)
-- [Potenciômetro Linear 10K + Knob](https://www.eletrogate.com/potenciometro-linear-10k?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=4&gad_campaignid=20223015315&gbraid=0AAAAADqxjs_gpqOJfLVmq1WIuAi4hx24R&gclid=CjwKCAjwqJXUBhBNEiwA8BgG7omOoSZQO_TGoV6BXl1_1kDrA87dErBUL3YU2gr2WFoq7l1gJ6wrxxoCuWoQAvD_BwE) (selecionar o fluxo desejado)
-- [Display LCD 16x2 I2C](https://www.eletrogate.com/display-lcd-16x2-i2c-backlight-azul?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&srsltid=AfmBOoo3RP5EGnFZOkpZSUs0i7zt_wHO_53pNtBFpeUyX1B0HMtXSWeSKIY) (exibir o fluxo máximo, medido e desejado na tela)
-- [Chave Gangorra]() (liga e desliga o sistema) 
-- [Botão Cogumelo]() (emergência)
+- [Fusível PTC 2.5A]()
+- [Potenciômetro Linear 10K + Knob](https://www.eletrogate.com/potenciometro-linear-10k?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=4&gad_campaignid=20223015315&gbraid=0AAAAADqxjs_gpqOJfLVmq1WIuAi4hx24R&gclid=CjwKCAjwqJXUBhBNEiwA8BgG7omOoSZQO_TGoV6BXl1_1kDrA87dErBUL3YU2gr2WFoq7l1gJ6wrxxoCuWoQAvD_BwE)
+- [Display ST7735 SPI](https://www.eletrogate.com/display-lcd-16x2-i2c-backlight-azul?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&srsltid=AfmBOoo3RP5EGnFZOkpZSUs0i7zt_wHO_53pNtBFpeUyX1B0HMtXSWeSKIY)
+- [Chave Gangorra]()
+- [Botão Cogumelo]() 
 - [LED RGB](https://www.usinainfo.com.br/led-arduino/modulo-led-rgb-ky-016-2541.html)(status do fluxo)
 - [Conector para fonte]()
 - [Conector de aviação 3 pin para sensor (gx12)]()
@@ -17,32 +15,33 @@ Para o projeto, os componentes utilizados serão:
 - [Conexões hidráulicas para sensor e válvula]()
 
 [toc]
-## **Arduino Uno R4 Minima**
+## **Renesas R7FA4M1AB3CFM_AA0**
 
-A escolha desse modelo de Arduino se deve pela necessidade de um pino DAC para controlar a válvula. Com a válvula escolhida, não seria possível usar um pino de PWM, então o pino DAC seria a melhor opção. Além disso, esse modelo do Arduino pode ser alimentado por 12V, tensão que é utilizada pela maioria dos outros componentes, removendo a necessidade de um regulador ou circuito auxiliar para alimentação do microcontrolador.
-Alternativa: usar um Arduino Uno R4 Minima (mais barato e sem wifi)
-[datasheet](https://docs.arduino.cc/hardware/uno-r4-minima/)
-- Corrente máxima: Até 170mA (módulo wifi ligado)
-- Alimentação: 12V
+Esse chip de microcontrolador foi selecionado pois é o mesmo chip usado no Arduino R4 Minima, que seria utilizado anteriormente, mas foi substituído quando a decisão da placa foi adotada. Ele tem um pino DAC, usado para enviar o sinal para o controle da válvula. Os outros pinos GPIO serão usados para os demais componentes.
+[Datasheet](https://www.renesas.com/en/document/dst/ra4m1-group-datasheet?r=1054146)
+[Manual de usuário](https://www.renesas.com/en/document/mah/renesas-ra4m1-group-users-manual-hardware?r=1054146)
+- Corrente máxima: 8.3mA
+- Alimentação: 3.3V
 - Pino DAC
-- (16x11x3)cm
+- (1x1)cm
+![image](https://hackmd.io/_uploads/HkJtU0pOMl.png)
+
 
 ## **Válvula Proporcional de Esfera Motorizada 1/2"**
 A válvula funciona com uma esfera motorizada, que é movida para abrir ou fechá-la e controlar o fluxo. 
-Nesse caso, quando a corrente for de 4mA, a válvula está totalmente fechada e, quando a corrente for de 20mA, está totalmente aberta.
+Nesse caso, quando a tensão for de 0V, a válvula está totalmente fechada e, quando a tensão for de 10V, está totalmente aberta.
 
-Ela foi escolhida por ser uma válvula proporcional, alimentada por 12V (que é utilizado em todo o restante do circuito), tem tamanho de 1/2" e é de fácil controle.
+Ela foi escolhida por ser uma válvula proporcional, alimentada por 12V (tensão da fonte), tem tamanho de 1/2" e é de fácil controle.
 
 Essa válvula também tem um fio de saída, que determina para o microcontrolador a posição atual da esfera. Não está sendo utilizado no momento.
 
-Será usado um fusível de 1.5A na alimentação dessa válvula, para protegê-la caso algo dê errado, visto que é o componente mais caro do projeto.
-
+O microcontrolador só é capaz de fornecer 3.3V. Portanto, um amplificador operacional foi adotado para amplificar o sinal analógico, dando um ganho de 3.
 - Alimentação: 12V
-- Entrada: Sinal de 4 a 20mA proveniente do conversor de sinal
+- Entrada: Sinal de 0 a 10V proveniente do amplificador operacional
 - Saída: Sinal que diz a posição da esfera motorizada
 - Corrente de Pico: 950mA
 
-[link](https://ussolid.com/products/12-proportional-motorized-ball-valve-stainless-steel-dc-924v-420ma-control-5-wire-with-position-indicator-ip67-full-port?srsltid=AfmBOopSO5vGeMlotOkvBaC3cu2WbbtJKdKoAcXBQKKmXDnx0gKAIlW_)
+[Link](https://simokit.com.br/product/valvula-esfera-reta-inox-dn15-proporcional-0-10v/)
 
 ## **Sensor de Fluxo YF-B1**
 Esse sensor de Fluxo de Água se adequa ao projeto pelo tamanho do tubo (1/2"), equivalente ao tubo já utilizado para o projeto, e pela vazão medida, que vai de 1L/min a 25L/min. O fluxo máximo medido pela empresa foi de cerca de 20L/min, então não haveria problemas de o fluxo real superar a capacidade de medição do sensor.
@@ -51,70 +50,113 @@ O sensor é composto por uma turbina, um ímã e um sensor hall. Quando a água 
 - Corrente máxima: 15mA
 - Alimentação: 5-15V
 - Q = F/11
-[datasheet](https://www.berrybase.de/en/product-datasheet/019391e394b77123b67497a442305b7e/create?srsltid=AfmBOop15xInDI9Svvvt8oZdoz8aRe0pngtSfpSjBk5hLPy-z7e2IX37)
 
-## **Módulo Optoacoplador PC-817**
-Esse módulo é usado para reduzir a tensão de saída do sensor de fluxo de 12V para 5V, tensão utilizada nos pinos GPIO do microcontrolador. 
+[Link](https://www.smartcomponentes.com/produto/sensor-de-fluxo-de-agua-12-1-25lmin-latao-yf-b1-175mpa.html)
+[Datasheet](https://www.berrybase.de/en/product-datasheet/019391e394b77123b67497a442305b7e/create?srsltid=AfmBOop15xInDI9Svvvt8oZdoz8aRe0pngtSfpSjBk5hLPy-z7e2IX37)
 
-O optoacoplador em si é composto por um LED infravermelho e um transistor bipolar fotossensível. Quando o LED é alimentado por 12V (nível lógico alto), ele emite luz infravermelho e aciona o transistor, sem conexão física. Quando o LED está apagado (nível lógico baixo), o transistor entra em corte. Esse componente, além de provocar a queda de tensão, possibilita o isolamento e proteção do Arduino, já que, se uma corrente muito alta for aplicada a ele, queimará apenas o LED infravermelho e o módulo pode ser substituído.
-- Corrente nominal: 50mA
-- Alimentação: 5V proveniente do Arduino
-- Entrada: Output do sensor de fluxo
-- Saída: Ligada em um pino GPIO do Arduino 
-- (30x39x12)mm
+## **Amplificador Operacional TLV2372**
+Esse chip tem dois amplificadores operacionais dentro de si, que serão utilizados para funções diferentes.
+
+O primeiro é utilizado para dar ganho ao sinal de saída do controlador para a válvula. Ele está conectado em configuração não inversora e tem ganho a partir da seguinte relação:
+![image](https://hackmd.io/_uploads/ryTeXRT_fl.png)
+No caso, os resistores em questão são R6 e R3. O sinal vem do pino 53 do microcontrolador. 
+O resistor R7 é um resistor de pulldown para drenar a corrente e forçar a saída a ser 0V, evitando que haja sinal quando não deveria.
+![image](https://hackmd.io/_uploads/HyJP-RauMe.png)
+
+O segundo amplificador está sendo utilizado como um buffer entre o sensor de fluxo e o microcontrolador. O divisor de tensão da entrada reduz a tensão de 12V para 3.3V, que passa pelo buffer e dá a saída no pino 49 do microcontrolador.
+O resistor R13 atua como proteção, limitando a corrente e reduzindo o atraso introduzido pelas capacitâncias parasitas do circuito.
+![image](https://hackmd.io/_uploads/rk0a4R6_Ge.png)
+
 
 [link 1](https://www.proesi.com.br/pc-817-modulo-optoacoplador-2-canais?utm_source=google-ads&utm_source=[V4]-[VIN%C3%8DCIUS]-[VENDAS]-[PMAX]-[ROAS-DESEJADO]&utm_content=[P1]-[REMARKETING]-[VISITANTES-E-COMPRADORES]&gad_source=1&gad_campaignid=17656097982&gbraid=0AAAAADP44mArpzV4-UN7oo_pnqo0EcWCb&gclid=CjwKCAjwhZDUBhBGEiwAbi5bjkqhbMGBGWkPnYsqBNMthL__a9TDpPIeV4m9nKeR4rEb-cksaXv_9BoC_8YQAvD_BwE#derivacao=8)
 [link 2](https://www.saravati.com.br/modulo-de-isolamento-optoacoplador-2-canais-pc817.html?gad_source=1&gad_campaignid=23551463662&gbraid=0AAAAAC2QUl8vy7cdIWwDqgJ-0JNm94Uwm&gclid=CjwKCAjwhZDUBhBGEiwAbi5bjlApaNRcONzjVyzdU4BQFQJQwJzLJDVWXSfT0V6XE5J2UZfgk_Wf9hoCdF0QAvD_BwE)
 
-## **Módulo Conversor de Sinal**
-O módulo conversor de sinais deve ser utilizado porque o controle da válvula escolhida opera baseado em um sinal de corrente de 4 a 20mA. O Arduino não é capaz de fornecer essa corrente variável a partir de um pino.
+## **Regulador de Tensão 3.3V AMS1117-3.3**
+O regulador está no circuito para baixar a tensão de 12V para 3.3V, que é usada para alimentar alguns componentes. Os capacitores são um circuito auxiliar exigido pelo datasheet do regulador e servem para fazer a filtragem de variações de baixas e altas potências.
+![image](https://hackmd.io/_uploads/HJjoSC6Oze.png)
 
-Esse módulo recebe o sinal analógico de tensão do arduino e o converte em corrente. Deve ser calibrado de acordo com as tensões de zero e máximo.
+[Link]()
 
-- Corrente máxima: 20mA
-- Alimentação: 12V
-- Entrada: proveniente do pino DAC do Arduino
-- Saída: válvula
-- (55x26x12)mm
+## **LED RGB**
+Usado para exibir visualmente o estado do sistema, com cada cor tendo um significado diferente:
+- Azul:
+- Amarelo:
+- Vermelho:
+- Laranja:
+Eles são conectados ao microcontrolador pelos pinos 12 (RED), 13 (BLUE), 14 (GREEN).
+![image](https://hackmd.io/_uploads/HyXmOAp_zl.png)
 
-[link do conversor](https://www.usinainfo.com.br/conversores-de-sinal/conversor-de-tensao-para-corrente-0-5v-para-4-20ma-ctc10-6168.html?srsltid=AfmBOopTunHgteONqKAmFXb7Kcbxz_sJInJUIO49kJ4LP1mp9DUe2ZYv8xc)
 
 ## Fonte
 https://www.fontesmeanwell.com.br/rs-35-12-fonte-chaveada-fechada-36w-88-264vca125-373vcc-saida-12v-3a-mean-well
 - (99x82x36)mm
 
-## **Orçamento de Corrente**
-20 (conversor) + 50 (optoacoplador) + 950 (válvula) + 170 (arduino) + 15 (sensor) = 1205 mA + 20% ~= 1.5A
+## Display ST7735
+![image](https://hackmd.io/_uploads/r1kUICTdzx.png)
+
+
+## Conector USB-C 2.0
+![image](https://hackmd.io/_uploads/rkEPI0a_Gl.png)
+
+
+## BOM
+- 7x Capacitor Cerâmico smd 100nF
+- 1x Capacitor Cerâmico smd 22uF
+- 1x Capacitor Cerâmico smd 10uF
+- 2x Capacitor Cerâmico smd 4.7uF
+- 6x Resistor smd 10k
+- 2x Resistor smd 20k
+- 2x Resistor smd 1k
+- 2x Resistor smd 5.1k
+- 3x Resistor smd 330
+- 1x Resistor smd 30k
+- 1x Fusível PTC smd 2.5A
+- 2x Botão Push smd
+- 1x LED RGB catodo comum
+- 1x Conector Fêmea USB-C 2.0
+- 1x Conector Molex Mini-Fit Jr 2x4
+- 1x Conector Molex Mini-Fit Jr 2x3
+- 1x Conector Molex Mini-Fit Jr 2x2
+- 1x TLV2372
+- 1x AMS1117-3.3
+- 1x YF-B1
+- 1x Potenciômetro Linear 10k
+- 1x Knob de potenciômetro
+- 1x Válvula Proporcional
+- 1x Renesas R7FA4M1AB3CFM_AA0
+- 1x Fonte RS-35-12
+- ?x Conectores de Aviação GX1?
+
+## **Consumo de Corrente**
+
 
 ## Esquemático
-![image](https://hackmd.io/_uploads/rkuJSFovfg.png)
+![image](https://hackmd.io/_uploads/H1esLRpuze.png)
+
 
 
 ## Controle
-No código, é feita a contagem de pulsos vindos do sensor para determinar o fluxo. A partir disso, a ideia é definir o valor de máximo do fluxo quando a válvula está 100% aberta e definir o valor desejado do fluxo.
-
-As opções para definir o fluxo desejado, por enquanto, são: definir através de uma interface e comunicar via wifi para o Arduino; ou definir por um potenciômetro.
-
-A partir daí, deve ser implementado o algoritmo de controle, verificando o fluxo instantâneo e abrindo ou fechando a válvula, conforme a necessidade.
+No código, é feita a contagem de pulsos vindos do sensor para determinar o fluxo. A partir disso, a ideia é definir o valor de máximo do fluxo quando a válvula está 100% aberta e definir o valor desejado do fluxo. Após isso, o fluxo será definido por uma conversão digital-analógico de valor até 3.3V. Esse sinal passa por um amplificador operacional de ganho 3 e segue para a válvula.
 
 ## Diagrama Lógico
-![diagrama_logico_controle_valvula_tractus](https://hackmd.io/_uploads/ryZ84KiPzx.png)
+
 
 ## Diagrama de Potência
-![diagrama_potencia_controle_valvula_tractus](https://hackmd.io/_uploads/rkaWeKoPMl.png)
+
 
 ## Diagrama do Código
-![diagrama_de_blocos_codigo_controle_valvula_tractus](https://hackmd.io/_uploads/Sk5DtdjDze.png)
+
 
 ## Requisição de Compras
-[Planilha de RC](https://integralmonitoramentoein138-my.sharepoint.com/:x:/g/personal/joao_baptista_integral-imi_com_br/IQD-fAICyIjvRIVYvroE831LAU3roNpbqv6PYGpeJ6V6XJs?e=of8ZUL&nav=MTVfezAwMDAwMDAwLTAwMDEtMDAwMC0wMDAwLTAwMDAwMDAwMDAwMH0)
+[RC Válvula](https://integralmonitoramentoein138-my.sharepoint.com/:x:/g/personal/joao_baptista_integral-imi_com_br/IQAJ0VLL1GrMQLJxgtgs7qGfAQLTgIY3VIOuGB1zUlPJKKM?e=Wh28EZ)
+[RC Sensor](https://integralmonitoramentoein138-my.sharepoint.com/:x:/g/personal/joao_baptista_integral-imi_com_br/IQDEU0ApyflLTq0Ow4kNu74WAR9PTYG0pupGPaK7aSaTUOs?e=R4D45n)
 
 ## Testes
-1) Teste de Continuidade entre alimentação e terra, pinos do Arduino e componentes.
+1) Teste de Continuidade entre alimentação e terra, pinos do microcontrolador e componentes.
 2) Com a válvula desconectada, ligar o sistema pela chave e medir a tensão da fonte (aproximadamente 12V).
-3) Testar a tela LCD e verificar sua mensagem.
+3) Testar o display e verificar sua mensagem.
 4) Girar o potenciômetro e testar a variação do Set no display e a variação das cores do LED.
 5) Pressionar o botão de Stop e verificar o display e o LED. Depois soltar o botão e ver se o sistema retorna ao estado normal.
 6) Testar a turbina do sensor e verificar o display e o LED.
-7) Medir a corrente de saída do módulo conversor, onde o mínimo deve ser 4mA e o  máximo deve ser 20mA.
+7) Medir a tensão de saída do amplificador operacional, onde o mínimo deve ser 0V e o máximo deve ser 10V (~9.99V).
 8) Conectar a válvula no sistema e girar o potenciômetro para verificar se o controle está sendo efetuado.
