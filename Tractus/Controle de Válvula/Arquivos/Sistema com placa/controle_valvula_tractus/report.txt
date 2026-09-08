@@ -1,0 +1,24 @@
+Atualizado GND de #PWR039 para #PWR028.
+Atualizado +3.3V de #PWR028 para #PWR029.
+Atualizado GND de #PWR029 para #PWR030.
+Atualizado GND de #PWR030 para #PWR031.
+Atualizado +3.3V de #PWR031 para #PWR032.
+Atualizado +3.3V de #PWR032 para #PWR033.
+Atualizado +12V de #PWR033 para #PWR034.
+Atualizado GND de #PWR034 para #PWR035.
+Atualizado GND de #PWR044 para #PWR036.
+Atualizado +12V de #PWR036 para #PWR037.
+Atualizado GND de #PWR048 para #PWR038.
+Atualizado +12V de #PWR037 para #PWR039.
+Atualizado +12Vi de #PWR038 para #PWR040.
+Atualizado GND de #PWR047 para #PWR041.
+Atualizado +12V de #PWR045 para #PWR043.
+Atualizado GND de #PWR046 para #PWR044.
+Atualizado SW_Push de BOOT para BOOT1.
+Atualizado 10K de R11 para R7.
+Atualizado 330 de R7 para R8.
+Atualizado 330 de R8 para R9.
+Atualizado 330 de R9 para R10.
+Atualizado 10K de R15 para R11.
+Atualizado 20K de R14 para R12.
+Anotação concluída.

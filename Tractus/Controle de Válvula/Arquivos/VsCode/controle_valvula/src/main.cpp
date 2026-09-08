@@ -120,7 +120,7 @@ void Calibrar(){
   delay(500);
 
   lcd.setCursor(0,0);
-  lcd.print("Max:" + String(fluxoMaximo));
+  lcd.print("Max:" + String(fluxoMaximo) + " L/min");
   lcd.setCursor(0,1);
 }
 
