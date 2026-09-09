@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 1.75,
-          "width": 1.125
+          "drill": 3.2,
+          "height": 3.5,
+          "width": 3.5
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -552,7 +552,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "controle_valvula_tractus.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -765,7 +765,7 @@
         "uuid": "94d8a090-3841-4036-9d70-e62beca957c5"
       }
     ],
-    "used_designators": "U1-4,#PWR1-54,MODE1,C1-11,J1-8,DISPLAY1,R1-17,YF\\-B1|POT1,SW1-2,RGB1,CHAVE1,POT1,RESET1,USB\\-C1,STOP1,AMP1C1,VALVE1,AMP\\-OP1,BOOT1,REG1,F1,PC1,AMP1,AMP1B1",
+    "used_designators": "U1-4,#PWR1-54,MODE1,C1-11,J1-8,DISPLAY1,R1-17,YF\\-B1|POT1,SW1-2,RGB1,CHAVE1,POT1,RESET1,USB\\-C1,STOP1,AMP1C1,VALVE1,AMP\\-OP1,BOOT1,REG1,F1,PC1,AMP1,AMP1B1,FONTE|VALVULA1",
     "variants": []
   },
   "sheets": [

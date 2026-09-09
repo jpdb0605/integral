@@ -4992,7 +4992,7 @@
 	)
 	(polyline
 		(pts
-			(xy 189.23 138.43) (xy 189.23 163.83)
+			(xy 189.23 138.43) (xy 189.23 166.37)
 		)
 		(stroke
 			(width 0)
@@ -5072,7 +5072,7 @@
 	)
 	(polyline
 		(pts
-			(xy 135.89 163.83) (xy 189.23 163.83)
+			(xy 135.89 166.37) (xy 189.23 166.37)
 		)
 		(stroke
 			(width 0)
@@ -5182,7 +5182,7 @@
 	)
 	(polyline
 		(pts
-			(xy 135.89 95.25) (xy 135.89 163.83)
+			(xy 135.89 95.25) (xy 135.89 166.37)
 		)
 		(stroke
 			(width 0)
@@ -6171,7 +6171,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a0758f6-097b-4773-98b0-ef41b3b838ef")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR015"
 			(at 109.22 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -6232,7 +6232,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR014")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -6413,7 +6413,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11f1aea0-9dcf-4345-9566-dbfc2e699456")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR025"
 			(at 175.26 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -6473,7 +6473,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR024")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -6491,7 +6491,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "186add84-55a6-412f-ac3d-3cdeaf75291b")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR07"
 			(at 41.91 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -6551,7 +6551,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR03")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -6724,7 +6724,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "243cd271-4c47-453b-84a5-71dd9adfa1bc")
-		(property "Reference" "R12"
+		(property "Reference" "R15"
 			(at 248.158 29.21 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6786,7 +6786,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R12")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -6803,7 +6803,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "282d3fcd-2833-44d3-8f9b-dceea27c6d7b")
-		(property "Reference" "R9"
+		(property "Reference" "R12"
 			(at 204.47 141.478 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6865,7 +6865,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R9")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -6882,7 +6882,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2f4447f5-77a6-4ea9-944f-07032c732d97")
-		(property "Reference" "R13"
+		(property "Reference" "R16"
 			(at 269.24 36.068 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6944,7 +6944,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R13")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -6962,7 +6962,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3371ccda-d5ad-496a-a293-a84b8878e0d8")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR020"
 			(at 124.46 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -7023,7 +7023,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR017")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7041,7 +7041,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "338a36fa-0ebb-4a0a-b70e-3a5e1f2ec3f7")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR032"
 			(at 220.98 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -7102,7 +7102,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR031")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -7200,7 +7200,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3d3910d2-3a12-48e0-a6cf-19683f35a67a")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR034"
 			(at 210.82 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -7261,7 +7261,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR033")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -7279,7 +7279,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f42b2aa-a1a9-4cd8-9c5c-7ae1b7152b3b")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR039"
 			(at 250.19 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -7339,7 +7339,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR038")
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -7755,10 +7755,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "50feaa57-10f4-49ce-8e0c-3dd289d7f010")
-		(property "Reference" "J2"
-			(at 259.08 67.31 0)
+		(property "Reference" "FONTE|VALVULA1"
+			(at 262.382 70.358 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7826,7 +7825,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "J2")
+					(reference "FONTE|VALVULA1")
 					(unit 1)
 				)
 			)
@@ -7844,7 +7843,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "53524cb9-4c0d-4e3b-8ec5-ab0692013b47")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR035"
 			(at 220.98 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -7905,7 +7904,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR034")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -8006,7 +8005,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5e343525-7913-42d3-a253-4b3c544df089")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR033"
 			(at 210.82 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -8067,7 +8066,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR032")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -8176,7 +8175,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "62baa6e6-9311-4e8c-a7d5-2ee7248a8859")
-		(property "Reference" "R14"
+		(property "Reference" "R5"
 			(at 110.998 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8238,7 +8237,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R14")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -8255,7 +8254,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "62c3c189-b91a-4a36-941c-e8a97ea5d6ad")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR017"
 			(at 113.03 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -8316,7 +8315,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR016")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -8414,7 +8413,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "63e4b823-8e17-4b9f-b9b9-a75e514c4f93")
-		(property "Reference" "R7"
+		(property "Reference" "R10"
 			(at 194.31 88.392 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8476,7 +8475,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R7")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -8493,7 +8492,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "68a5501b-36da-4c59-a578-b498b05d1515")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR016"
 			(at 106.68 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -8554,7 +8553,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR015")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -8572,7 +8571,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "701da47b-1857-469c-8b06-57ba37ad9e37")
-		(property "Reference" "C7"
+		(property "Reference" "C8"
 			(at 167.64 34.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8636,7 +8635,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "C7")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -8654,7 +8653,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "704ca71e-ffb3-446e-84a8-716e0841e375")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR037"
 			(at 236.22 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -8715,7 +8714,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR036")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -8732,7 +8731,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7085cf28-5d44-4c48-9a84-a89f437e3d98")
-		(property "Reference" "R11"
+		(property "Reference" "R14"
 			(at 246.38 33.528 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8794,7 +8793,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R11")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -8812,7 +8811,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "730a93e1-87b3-4df3-9280-7a3e0d32d968")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR018"
 			(at 113.03 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -8872,7 +8871,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR045")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -8988,7 +8987,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7de4695e-34b9-4c0e-9fc9-6a9c263d1225")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR038"
 			(at 248.92 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -9049,7 +9048,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR037")
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -9067,7 +9066,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f7eb28b-1589-468d-9d4f-12fd8058336b")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR06"
 			(at 35.56 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -9128,7 +9127,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR07")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -9146,7 +9145,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "83c63a50-2728-42e0-b02b-cd64554d2d98")
-		(property "Reference" "C10"
+		(property "Reference" "C11"
 			(at 217.17 34.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9210,7 +9209,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "C10")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -9228,7 +9227,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "83c7575f-10e9-45b7-b34c-a8ce9bf49786")
-		(property "Reference" "C11"
+		(property "Reference" "C6"
 			(at 120.65 96.5199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9292,7 +9291,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "C11")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -9310,7 +9309,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8626a73e-842a-4eaf-9f61-676b2a35c893")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR031"
 			(at 209.55 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -9370,7 +9369,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR030")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -9470,7 +9469,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ad39168-8733-4252-aac9-0a490fb139f8")
-		(property "Reference" "#PWR041"
+		(property "Reference" "#PWR042"
 			(at 262.89 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -9530,7 +9529,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR041")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -9548,8 +9547,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8bc82700-46cc-4d94-aabe-149e51d7cfa0")
-		(property "Reference" "J1"
-			(at 208.28 106.68 0)
+		(property "Reference" "DISPLAY1"
+			(at 208.28 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9629,7 +9628,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "J1")
+					(reference "DISPLAY1")
 					(unit 1)
 				)
 			)
@@ -9647,7 +9646,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8bfd17a1-7c24-432e-981b-be999ec56774")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR028"
 			(at 189.23 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9707,7 +9706,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR027")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -9725,7 +9724,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8d96f8dd-82a5-48ad-8017-f118f1116314")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR023"
 			(at 158.75 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -9785,7 +9784,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR022")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -9802,7 +9801,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8ee91759-6109-4c37-adba-ccfdfe803370")
-		(property "Reference" "C6"
+		(property "Reference" "C7"
 			(at 124.714 36.83 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9864,7 +9863,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "C6")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -9881,7 +9880,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8f19c618-5890-455c-a0ca-860ac41c44dd")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR043"
 			(at 259.08 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -9942,7 +9941,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR042")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -10037,7 +10036,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "93592505-f060-412c-8e1c-b0303b8e5fe8")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR019"
 			(at 113.03 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -10098,7 +10097,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR020")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -10116,7 +10115,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9388e829-da07-4b3a-bfb7-da4f72244f8d")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR029"
 			(at 204.47 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -10176,7 +10175,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR028")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -10194,7 +10193,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9cdfe200-7bb4-4e74-b0dc-a4a173be5461")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR022"
 			(at 151.13 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -10254,7 +10253,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR021")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -10272,7 +10271,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9d4422ee-ed32-4a55-b009-4e980b273749")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR014"
 			(at 100.33 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -10332,7 +10331,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR018")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -10349,7 +10348,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9f9d03ca-a73c-4cbc-93b8-570c7c03b18b")
-		(property "Reference" "R2"
+		(property "Reference" "R4"
 			(at 113.03 50.292 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10411,7 +10410,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R2")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -10509,7 +10508,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a3f9a755-1749-43a2-8836-090cfa4e9753")
-		(property "Reference" "R3"
+		(property "Reference" "R6"
 			(at 166.37 77.978 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10571,7 +10570,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R3")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -10588,7 +10587,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a59f1bee-7c7e-4ba7-a146-d753c5bc1aa7")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR05"
 			(at 45.72 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -10649,7 +10648,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR06")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -10745,7 +10744,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a928f168-aa23-48a3-a38a-238829d2d3c4")
-		(property "Reference" "R8"
+		(property "Reference" "R11"
 			(at 204.47 136.398 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10807,7 +10806,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R8")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -10904,7 +10903,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af0925f9-f75e-4201-9d55-199d7f45910f")
-		(property "Reference" "C9"
+		(property "Reference" "C10"
 			(at 205.74 34.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10968,7 +10967,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "C9")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10986,7 +10985,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b406a332-b7a0-467d-baa4-48fb046d25d3")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR044"
 			(at 265.43 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -11046,7 +11045,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR043")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -11153,7 +11152,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba5d3f8e-cffe-486b-b3d6-5be4615ccf50")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR04"
 			(at 35.56 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -11214,7 +11213,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR05")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -11231,7 +11230,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c02e385f-905a-4111-af22-9a9a2da2c679")
-		(property "Reference" "R10"
+		(property "Reference" "R13"
 			(at 204.47 146.812 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11293,7 +11292,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R10")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -11310,7 +11309,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c0b9c121-0594-4484-8f71-87950d0d1b93")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR030"
 			(at 201.93 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -11371,7 +11370,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR029")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -11488,7 +11487,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c483c8eb-ddfc-41f1-b85f-dcdb6aad4638")
-		(property "Reference" "R6"
+		(property "Reference" "R9"
 			(at 181.61 84.328 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11550,7 +11549,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R6")
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -11567,7 +11566,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c566006b-d0dd-4b5e-80d3-65c769b69dc9")
-		(property "Reference" "R5"
+		(property "Reference" "R8"
 			(at 176.53 126.492 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11629,7 +11628,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R5")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -11647,7 +11646,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c8871263-2737-4db6-9abd-0c7a45db13c0")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR026"
 			(at 186.69 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -11708,7 +11707,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR025")
+					(reference "#PWR026")
 					(unit 1)
 				)
 			)
@@ -11726,7 +11725,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c991bb3f-8835-4b06-a338-a1a10d490787")
-		(property "Reference" "C8"
+		(property "Reference" "C9"
 			(at 179.07 34.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11790,7 +11789,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "C8")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -11807,7 +11806,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca4f20dc-247b-4738-b7ba-8dcbba572f87")
-		(property "Reference" "R15"
+		(property "Reference" "R3"
 			(at 107.188 97.79 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11869,7 +11868,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R15")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -11886,7 +11885,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cbb5efba-e728-4034-b00b-cda53cf93908")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR03"
 			(at 45.72 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -11947,7 +11946,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR04")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -11964,7 +11963,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cce66e56-6d96-449e-a866-005b0a71584a")
-		(property "Reference" "R4"
+		(property "Reference" "R7"
 			(at 176.53 119.888 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12026,7 +12025,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R4")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -12125,7 +12124,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cddae221-f732-4aa0-b505-26e9ca14e34b")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR041"
 			(at 252.73 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -12185,7 +12184,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR040")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -12281,7 +12280,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d3e0909f-d553-4025-82ef-c3b031a78dca")
-		(property "Reference" "R16"
+		(property "Reference" "R2"
 			(at 102.87 91.948 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12343,7 +12342,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "R16")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -12439,7 +12438,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d5f01fd4-3fbd-4acc-91d3-a5e592e18de8")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR024"
 			(at 158.75 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -12499,7 +12498,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR023")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -12642,7 +12641,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2d27f44-6c3e-4dd4-8855-cea0dbc6df76")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR040"
 			(at 250.19 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -12702,7 +12701,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR039")
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -12720,7 +12719,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e63c4f51-3e9a-4e75-a4fe-db3340a3cc5d")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR045"
 			(at 265.43 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -12780,7 +12779,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR044")
+					(reference "#PWR045")
 					(unit 1)
 				)
 			)
@@ -12798,7 +12797,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8199a18-4bb8-4129-be71-be9c6748a3c8")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR036"
 			(at 217.17 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -12858,7 +12857,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR035")
+					(reference "#PWR036")
 					(unit 1)
 				)
 			)
@@ -13033,7 +13032,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f19d601f-7d4b-4ab7-b4a7-7bcac1487018")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR021"
 			(at 132.08 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -13094,7 +13093,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR019")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -13191,7 +13190,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe2d76c6-db4d-447e-9fac-5382bb4166ea")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR027"
 			(at 186.69 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -13252,7 +13251,7 @@
 		(instances
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
-					(reference "#PWR026")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
