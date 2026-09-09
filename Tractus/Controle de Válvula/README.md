@@ -4,13 +4,12 @@ A ideia desse sistema é automatizar o controle do fluxo de água no acoplamento
 Para o projeto, os componentes utilizados serão:
 - [Fusível PTC 2.5A]()
 - [Potenciômetro Linear 10K + Knob](https://www.eletrogate.com/potenciometro-linear-10k?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gad_source=4&gad_campaignid=20223015315&gbraid=0AAAAADqxjs_gpqOJfLVmq1WIuAi4hx24R&gclid=CjwKCAjwqJXUBhBNEiwA8BgG7omOoSZQO_TGoV6BXl1_1kDrA87dErBUL3YU2gr2WFoq7l1gJ6wrxxoCuWoQAvD_BwE)
-- [Display ST7735 SPI](https://www.eletrogate.com/display-lcd-16x2-i2c-backlight-azul?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&srsltid=AfmBOoo3RP5EGnFZOkpZSUs0i7zt_wHO_53pNtBFpeUyX1B0HMtXSWeSKIY)
+- [Display ST7735 SPI]()
 - [Chave Gangorra]()
 - [Botão Cogumelo]() 
-- [LED RGB](https://www.usinainfo.com.br/led-arduino/modulo-led-rgb-ky-016-2541.html)(status do fluxo)
+- [LED RGB]()
 - [Conector para fonte]()
-- [Conector de aviação 3 pin para sensor (gx12)]()
-- [Conector de aviação 5 pin para válvula (gx16)]()
+- [Conector de aviação 7 ou 8 pin para válvula (gx16)]()
 - [espaçadores de nylon + parafusos m3]()
 - [Conexões hidráulicas para sensor e válvula]()
 
@@ -23,7 +22,6 @@ Esse chip de microcontrolador foi selecionado pois é o mesmo chip usado no Ardu
 - Corrente máxima: 8.3mA
 - Alimentação: 3.3V
 - Pino DAC
-- (1x1)cm
 ![image](https://hackmd.io/_uploads/HkJtU0pOMl.png)
 
 
@@ -68,8 +66,6 @@ O resistor R13 atua como proteção, limitando a corrente e reduzindo o atraso i
 ![image](https://hackmd.io/_uploads/rk0a4R6_Ge.png)
 
 
-[link 1](https://www.proesi.com.br/pc-817-modulo-optoacoplador-2-canais?utm_source=google-ads&utm_source=[V4]-[VIN%C3%8DCIUS]-[VENDAS]-[PMAX]-[ROAS-DESEJADO]&utm_content=[P1]-[REMARKETING]-[VISITANTES-E-COMPRADORES]&gad_source=1&gad_campaignid=17656097982&gbraid=0AAAAADP44mArpzV4-UN7oo_pnqo0EcWCb&gclid=CjwKCAjwhZDUBhBGEiwAbi5bjkqhbMGBGWkPnYsqBNMthL__a9TDpPIeV4m9nKeR4rEb-cksaXv_9BoC_8YQAvD_BwE#derivacao=8)
-[link 2](https://www.saravati.com.br/modulo-de-isolamento-optoacoplador-2-canais-pc817.html?gad_source=1&gad_campaignid=23551463662&gbraid=0AAAAAC2QUl8vy7cdIWwDqgJ-0JNm94Uwm&gclid=CjwKCAjwhZDUBhBGEiwAbi5bjlApaNRcONzjVyzdU4BQFQJQwJzLJDVWXSfT0V6XE5J2UZfgk_Wf9hoCdF0QAvD_BwE)
 
 ## **Regulador de Tensão 3.3V AMS1117-3.3**
 O regulador está no circuito para baixar a tensão de 12V para 3.3V, que é usada para alimentar alguns componentes. Os capacitores são um circuito auxiliar exigido pelo datasheet do regulador e servem para fazer a filtragem de variações de baixas e altas potências.
@@ -92,10 +88,13 @@ https://www.fontesmeanwell.com.br/rs-35-12-fonte-chaveada-fechada-36w-88-264vca1
 - (99x82x36)mm
 
 ## Display ST7735
+![image](https://hackmd.io/_uploads/rJVMsy1KGe.png)
+
 ![image](https://hackmd.io/_uploads/r1kUICTdzx.png)
 
 
 ## Conector USB-C 2.0
+Usado para passar o código ao microcontrolador.
 ![image](https://hackmd.io/_uploads/rkEPI0a_Gl.png)
 
 
@@ -117,6 +116,8 @@ https://www.fontesmeanwell.com.br/rs-35-12-fonte-chaveada-fechada-36w-88-264vca1
 - 1x Conector Molex Mini-Fit Jr 2x4
 - 1x Conector Molex Mini-Fit Jr 2x3
 - 1x Conector Molex Mini-Fit Jr 2x2
+- 1x Botão Cogumelo
+- 1x Chave Gangorra On-Off
 - 1x TLV2372
 - 1x AMS1117-3.3
 - 1x YF-B1
@@ -125,7 +126,20 @@ https://www.fontesmeanwell.com.br/rs-35-12-fonte-chaveada-fechada-36w-88-264vca1
 - 1x Válvula Proporcional
 - 1x Renesas R7FA4M1AB3CFM_AA0
 - 1x Fonte RS-35-12
-- ?x Conectores de Aviação GX1?
+- 1x Conector de Tomada Tripolar Macho
+- 1x Conectores de Aviação GX16 7 pinos
+- ?x componentes de fixação mecânica
+
+## **Modelos 3D**
+- [Potenciômetro](https://sketchfab.com/3d-models/potenciometro-linear-10k-ee4e9d38fba44a51ad0ec0225995b813)
+- [Knob](https://www.traceparts.com/br/product/rs-group-knob-black-blue-marker-line-6mm-d?CatalogPath=RS_COMPONENTS%3APSF_433042&Product=90-08032024-083055)
+- [Display](https://grabcad.com/library/tft-lcd-1-8-inch-spi-st7735-128x160-1)
+- [LED RGB](https://sketchfab.com/3d-models/rgb-led-7ee14ba4a6204e74a5d37169f342c785)
+- [Fonte - não encontrado]()
+- [Botão de Emergência - não encontrado]()
+- [Chave Gangorra On-Off - não encontrado]()
+- [Conector Tomada Tripolar Macho](https://grabcad.com/library/tomada-macho-2p-t-10a-250v-1)
+- [Conector de Aviação GX16 - 7 ou 8 Pinos - não encontrado]()
 
 ## **Consumo de Corrente**
 
