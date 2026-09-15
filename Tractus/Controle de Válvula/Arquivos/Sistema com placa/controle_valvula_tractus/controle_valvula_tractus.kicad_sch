@@ -4789,6 +4789,12 @@
 		(uuid "ad044e97-8674-4046-834a-d611fc36da4f")
 	)
 	(junction
+		(at 158.75 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b6dfbdb9-18de-4697-9464-b08900180d79")
+	)
+	(junction
 		(at 113.03 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4807,6 +4813,12 @@
 		(uuid "d594d45b-e986-420d-b4ad-32e364566b3f")
 	)
 	(junction
+		(at 170.18 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc25b7e3-e7c3-46d8-a5b1-178e7a3c64e3")
+	)
+	(junction
 		(at 22.86 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4819,16 +4831,6 @@
 	(no_connect
 		(at 173.99 144.78)
 		(uuid "a87e4d44-d13d-4184-a046-1624453ecb21")
-	)
-	(wire
-		(pts
-			(xy 163.83 72.39) (xy 175.26 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "00ad065d-b390-4c74-b6f7-846a73dd7abf")
 	)
 	(wire
 		(pts
@@ -4912,6 +4914,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 72.39) (xy 158.75 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bcc1216-ec65-4a49-8fe5-9d07a54a0c7e")
+	)
+	(wire
+		(pts
 			(xy 92.71 38.1) (xy 113.03 38.1)
 		)
 		(stroke
@@ -4919,6 +4931,16 @@
 			(type default)
 		)
 		(uuid "1d8538e6-8183-4c1c-a75e-f23b4782b9e7")
+	)
+	(wire
+		(pts
+			(xy 158.75 72.39) (xy 158.75 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2150696e-9c3d-4196-a968-ea8b98900e44")
 	)
 	(polyline
 		(pts
@@ -5050,6 +5072,16 @@
 		)
 		(uuid "43de9293-59bf-4b58-9445-6e6c1dfa05bf")
 	)
+	(wire
+		(pts
+			(xy 170.18 72.39) (xy 175.26 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4517d0b5-1976-4a92-80d4-d438366737f9")
+	)
 	(polyline
 		(pts
 			(xy 228.6 95.25) (xy 228.6 128.27)
@@ -5129,6 +5161,16 @@
 			(type default)
 		)
 		(uuid "56788db8-cb92-43a9-a5c4-3285cc456809")
+	)
+	(wire
+		(pts
+			(xy 167.64 72.39) (xy 170.18 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59440252-c96b-4b3d-8e7a-54779cb45df5")
 	)
 	(wire
 		(pts
@@ -5452,13 +5494,23 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 69.85) (xy 163.83 69.85)
+			(xy 158.75 55.88) (xy 162.56 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b4a213c9-03a3-4b1c-9d9b-a516d23ed163")
+	)
+	(wire
+		(pts
+			(xy 170.18 62.23) (xy 170.18 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4f26ec8-2e4f-4836-8795-874e5feffe95")
 	)
 	(wire
 		(pts
@@ -5472,7 +5524,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 69.85) (xy 163.83 72.39)
+			(xy 162.56 55.88) (xy 162.56 62.23)
 		)
 		(stroke
 			(width 0)
@@ -5549,16 +5601,6 @@
 			(type default)
 		)
 		(uuid "ceaa8a2d-9c6d-4b96-9ba4-6128d4b3cd9e")
-	)
-	(wire
-		(pts
-			(xy 25.4 73.66) (xy 41.91 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0c79506-1e37-4b5c-a648-342c833476f6")
 	)
 	(wire
 		(pts
@@ -5780,16 +5822,6 @@
 		)
 		(uuid "19426498-871f-4fe6-b809-4426f4fecdf9")
 	)
-	(label "AMPOP_I"
-		(at 25.4 73.66 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "294fd124-7661-44db-9569-3e8a0d4ef485")
-	)
 	(label "SPI_SCK"
 		(at 41.91 83.82 180)
 		(effects
@@ -5801,7 +5833,7 @@
 		(uuid "2b91372e-2faf-4e57-bb45-2422cfa5385a")
 	)
 	(label "AMPOP_I"
-		(at 161.29 69.85 0)
+		(at 158.75 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5879,6 +5911,16 @@
 			(justify right bottom)
 		)
 		(uuid "81ba9783-3e26-4c29-a3c4-3aedb459b8e7")
+	)
+	(label "AMPOP_I"
+		(at 92.71 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9109d630-ffff-4bfc-8061-50919982e440")
 	)
 	(label "SPI_MOSI"
 		(at 194.31 120.65 0)
@@ -7746,6 +7788,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 166.37 62.23 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4daa27d8-4bcf-46f8-9856-ed696073b5f7")
+		(property "Reference" "R17"
+			(at 166.37 62.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 166.37 59.944 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 166.37 64.008 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 166.37 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5a224c1e-46da-4b8b-93b9-8756cf0bb67c")
+		)
+		(pin "2"
+			(uuid "760256f2-b7b9-4d81-8c8e-61e6ba5d6933")
+		)
+		(instances
+			(project "controle_valvula_tractus"
+				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_02x02_Top_Bottom")
 		(at 257.81 73.66 0)
 		(unit 1)
@@ -9049,6 +9170,85 @@
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
 					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 163.83 72.39 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7e4d9b39-e799-4064-b9e2-9a65693dcc33")
+		(property "Reference" "C12"
+			(at 163.83 69.342 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 163.83 75.692 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 167.64 71.4248 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 163.83 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 163.83 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6269082c-4f18-4266-9ec8-58fc18db0b71")
+		)
+		(pin "1"
+			(uuid "4e88f72e-8f4c-4b65-8bbd-51640affc2ed")
+		)
+		(instances
+			(project "controle_valvula_tractus"
+				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
+					(reference "C12")
 					(unit 1)
 				)
 			)
