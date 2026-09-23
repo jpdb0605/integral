@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include <Wire.h>
+/*#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
 #define PINO_SENSOR 2
@@ -165,4 +165,43 @@ void Display(){
   else{
     lcd.print("S:" + String(fluxoDesejado) + " M:" + String(fluxo) + "  ");
   }
+} */
+
+// Definição dos pinos
+const int pinPotenciometro = A0; // Entrada analógica do potenciómetro
+const int pinPWM = 9;            // Saída PWM que liga ao resistor do filtro RC
+
+void setup() {
+  // Iniciar a comunicação série para monitorização no computador
+  Serial.begin(9600);
+  
+  // Configurar o pino do PWM como saída
+  pinMode(pinPWM, OUTPUT);
+}
+
+void loop() {
+  // 1. Ler o valor cru do potenciómetro (intervalo de 0 a 1023)
+  int valorPot = analogRead(pinPotenciometro);
+  
+  // 2. Mapear a leitura analógica para a resolução do PWM (intervalo de 0 a 255)
+  int valorPWM = map(valorPot, 0, 1023, 0, 255);
+  
+  // 3. Enviar o sinal PWM para o pino 9
+  analogWrite(pinPWM, valorPWM);
+  
+  // 4. Calcular a tensão estimada após o filtro para mostrar no ecrã
+  // (Como o PWM do Uno é de 5V, multiplicamos a fração por 5.0)
+  float tensaoEstimada = (valorPWM / 255.0) * 5.0;
+  
+  // 5. Imprimir os resultados no Monitor Série
+  Serial.print("Potenciometro: ");
+  Serial.print(valorPot);
+  Serial.print(" | PWM: ");
+  Serial.print(valorPWM);
+  Serial.print(" | Tensao no Filtro: ");
+  Serial.print(tensaoEstimada);
+  Serial.println(" V");
+  
+  // Pequena pausa para estabilizar a leitura e não sobrecarregar o Monitor Série
+  delay(50);
 }

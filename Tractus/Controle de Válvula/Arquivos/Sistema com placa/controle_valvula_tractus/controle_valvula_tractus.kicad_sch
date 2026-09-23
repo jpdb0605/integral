@@ -4681,10 +4681,22 @@
 		(uuid "02084ca0-c4a5-4063-9140-5e0051001c3f")
 	)
 	(junction
+		(at 217.17 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0380e735-a4dd-44e2-b62a-dc0c81637300")
+	)
+	(junction
 		(at 189.23 39.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0bea8308-7949-48b4-98de-d2a740b4927a")
+	)
+	(junction
+		(at 217.17 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1925d5e9-4975-41d1-935c-fe22f840a324")
 	)
 	(junction
 		(at 190.5 86.36)
@@ -4709,6 +4721,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "318ae22a-6abd-49bf-b8b0-406c58ecd944")
+	)
+	(junction
+		(at 217.17 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33d9a28e-4a71-4c22-b95a-00ed74df3022")
 	)
 	(junction
 		(at 252.73 73.66)
@@ -4771,6 +4789,12 @@
 		(uuid "88674e5d-5f2e-4152-b359-f7d05a856a78")
 	)
 	(junction
+		(at 217.17 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94d76e9c-e033-449c-8231-a757c41fb224")
+	)
+	(junction
 		(at 265.43 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4831,6 +4855,16 @@
 	(no_connect
 		(at 173.99 144.78)
 		(uuid "a87e4d44-d13d-4184-a046-1624453ecb21")
+	)
+	(wire
+		(pts
+			(xy 222.25 69.85) (xy 222.25 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01f72805-5cf9-438a-ac21-2ddb6439b991")
 	)
 	(wire
 		(pts
@@ -5244,6 +5278,16 @@
 	)
 	(wire
 		(pts
+			(xy 212.09 78.74) (xy 217.17 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69ee4c63-3078-4880-89a5-c980e127e301")
+	)
+	(wire
+		(pts
 			(xy 194.31 148.59) (xy 200.66 148.59)
 		)
 		(stroke
@@ -5311,6 +5355,16 @@
 			(type default)
 		)
 		(uuid "7a931e7e-e1f0-446e-9981-d76114c1da71")
+	)
+	(wire
+		(pts
+			(xy 217.17 78.74) (xy 222.25 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ea0fbd7-65d4-4c2a-b05c-251196a10238")
 	)
 	(wire
 		(pts
@@ -5404,6 +5458,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 69.85) (xy 222.25 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91ee10ad-191f-4de2-bb51-083fff1597f4")
+	)
+	(wire
+		(pts
 			(xy 173.99 134.62) (xy 173.99 135.89)
 		)
 		(stroke
@@ -5411,6 +5475,16 @@
 			(type default)
 		)
 		(uuid "920c02ba-132c-48ad-bd0b-0a03e9cb1fa5")
+	)
+	(wire
+		(pts
+			(xy 217.17 69.85) (xy 217.17 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "939fabd1-9866-4c9b-9239-23297a0048f7")
 	)
 	(wire
 		(pts
@@ -5524,6 +5598,16 @@
 	)
 	(wire
 		(pts
+			(xy 212.09 69.85) (xy 217.17 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc4cd652-7edb-42fc-8c23-009a6059fec7")
+	)
+	(wire
+		(pts
 			(xy 162.56 55.88) (xy 162.56 62.23)
 		)
 		(stroke
@@ -5551,6 +5635,16 @@
 			(type default)
 		)
 		(uuid "c4d89f51-da4d-4458-a4f8-4e8196502869")
+	)
+	(wire
+		(pts
+			(xy 217.17 78.74) (xy 217.17 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7ae89df-d087-4426-98fb-2057a8b3c6f0")
 	)
 	(wire
 		(pts
@@ -5741,6 +5835,16 @@
 			(type default)
 		)
 		(uuid "f49efe57-9bd1-4051-beba-9bc5a68f23a3")
+	)
+	(wire
+		(pts
+			(xy 212.09 69.85) (xy 212.09 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f751c77e-c424-4bf6-be2e-ab07ccee3733")
 	)
 	(wire
 		(pts
@@ -11586,10 +11690,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c2857809-a804-4a50-beed-cc53ab0cdfb2")
 		(property "Reference" "AMP1"
-			(at 218.44 72.3899 0)
+			(at 218.186 66.294 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11600,7 +11703,7 @@
 			)
 		)
 		(property "Value" "TLV2372"
-			(at 218.44 74.9299 0)
+			(at 218.186 68.834 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11835,6 +11938,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 212.09 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c7eea370-1fd5-44b4-a5b2-cb1210fc5888")
+		(property "Reference" "C13"
+			(at 215.138 74.93 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 208.788 74.93 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 213.0552 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 212.09 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 212.09 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "24373d80-7f72-4982-9543-bf53b8388969")
+		)
+		(pin "1"
+			(uuid "52f6490a-4d7f-4993-b2ac-42af83758143")
+		)
+		(instances
+			(project "controle_valvula_tractus"
+				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 180.34 121.92 90)
 		(unit 1)
@@ -11908,6 +12090,85 @@
 			(project "controle_valvula_tractus"
 				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 222.25 74.93 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c8a7602a-d585-4003-8c54-5df6f0e434a8")
+		(property "Reference" "C14"
+			(at 225.298 74.93 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF"
+			(at 218.948 74.93 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 223.2152 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 222.25 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 222.25 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3f7ca303-f636-4f7c-a54f-56a9f4d1e656")
+		)
+		(pin "1"
+			(uuid "10339858-e594-4396-b573-fa9f024b1995")
+		)
+		(instances
+			(project "controle_valvula_tractus"
+				(path "/94d8a090-3841-4036-9d70-e62beca957c5"
+					(reference "C14")
 					(unit 1)
 				)
 			)
